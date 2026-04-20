@@ -53,21 +53,26 @@ hackathon-frontend/
 
 1. **Клонируйте репозиторий:**
 ```bash
+
 git clone https://github.com/your-username/hackathon-aggregator.git
 cd hackathon-aggregator
+```
+
 Откройте приложение:
 
 Просто откройте файл index.html в любом современном браузере
 
 Или используйте локальный сервер:
 
-bash
+```bash
+
 # Если у вас установлен Python
 python -m http.server 8000
 
 # Или с помощью Node.js (если установлен live-server)
 npx live-server
 Перейдите по адресу: http://localhost:8000
+```
 
 Тестовый аккаунт
 Для быстрого входа используйте тестовые данные:
@@ -170,7 +175,12 @@ user_hackathons_{userId} — список хакатонов, на которы�
 
 © 2026 РТУ МИРЭА. Все права защищены.
 
-text
+<img width="1794" height="811" alt="image" src="https://github.com/user-attachments/assets/c14a2d25-61d8-4553-9e81-1aaa5fd4425b" />
 
----
+<img width="1780" height="815" alt="image" src="https://github.com/user-attachments/assets/e7322f3a-5bcc-40dd-9d50-578391e903c8" />
+
+<img width="1383" height="763" alt="image" src="https://github.com/user-attachments/assets/35bb3cfb-b195-4939-95d4-52d46910a212" />
+
+
+
 
