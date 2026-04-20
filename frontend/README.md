@@ -25,6 +25,7 @@
 
 ## 📁 Структура проекта
 hackathon-frontend/
+
 ├── index.html # Главная страница
 
 ├── css/
