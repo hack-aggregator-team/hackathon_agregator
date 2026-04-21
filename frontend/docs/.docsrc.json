@@ -1,0 +1,78 @@
+{
+  "project": {
+    "name": "Hackathon Aggregator Frontend",
+    "version": "1.0.0",
+    "description": "Веб-приложение для поиска и участия в IT-хакатонах",
+    "author": "ИКБО-42-23 (Шаталов Р.А., Ератин Н.В., Ладиков М.Д., Матюха Е.А., Кутдюсов Д.А.)",
+    "created": "2026",
+    "repository": "github.com/..../hackathon-aggregator"
+  },
+  "techStack": {
+    "language": "JavaScript ES6+",
+    "styles": "CSS3 с эффектами Glassmorphism",
+    "icons": "Font Awesome 6",
+    "storage": "LocalStorage API",
+    "calendar": "html2canvas v1.4.1"
+  },
+  "classes": {
+    "User": {
+      "file": "js/models/userModel.js",
+      "description": "Модель пользователя системы",
+      "methods": ["register()", "login()", "restorePassword()", "addToSavedEvents()", "getSavedEvents()"],
+      "properties": ["id", "name", "email", "password", "city", "skills", "role", "createdAt"]
+    },
+    "AuthComponent": {
+      "file": "js/components/auth.js",
+      "description": "Компонент авторизации и регистрации",
+      "methods": ["render()", "attachEvents()", "destroy()"]
+    },
+    "MainApp": {
+      "file": "js/components/mainApp.js",
+      "description": "Главная страница со списком хакатонов",
+      "methods": ["render()", "attachEvents()", "updateHackathonList()", "updateCalendarPreview()", "updateUserInfo()"]
+    },
+    "HackathonCard": {
+      "file": "js/components/hackathonCard.js",
+      "description": "Карточка хакатона",
+      "methods": ["render()", "attachEvents()", "showNotification()"]
+    },
+    "ProfileModal": {
+      "file": "js/components/ProfileModal.js",
+      "description": "Модальное окно профиля пользователя",
+      "methods": ["render()", "renderProfileContent()", "renderHackathonsContent()", "renderSettingsContent()", "attachEvents()", "refreshModal()"]
+    },
+    "CalendarView": {
+      "file": "js/components/CalendarView.js",
+      "description": "Компонент календаря с экспортом",
+      "methods": ["render()", "renderCalendar()", "exportCalendarAsImage()", "showDayHackathons()", "updateCalendar()"]
+    }
+  },
+  "services": {
+    "storageService": {
+      "file": "js/services/storageService.js",
+      "description": "Работа с localStorage",
+      "functions": ["initStorage()", "getUsers()", "createUser()", "loginUser()", "getCurrentUser()", "logoutUser()", "updateUserProfile()"]
+    },
+    "themeService": {
+      "file": "js/services/themeService.js",
+      "description": "Управление темой и шрифтами",
+      "functions": ["getUserSettings()", "saveUserSettings()", "applyTheme()", "applyFontSize()", "updateSetting()"]
+    },
+    "profileService": {
+      "file": "js/services/profileService.js",
+      "description": "Управление профилем и регистрациями",
+      "functions": ["getUserRegisteredHackathons()", "registerForHackathon()", "cancelRegistration()", "updateUserProfileData()"]
+    }
+  },
+  "data": {
+    "mockHackathons": {
+      "file": "data/mockHackathons.js",
+      "description": "Заглушка с данными хакатонов",
+      "count": 6
+    }
+  },
+  "styles": {
+    "file": "css/styles.css",
+    "features": ["Glassmorphism", "Неоновая подсветка", "Анимированный градиент", "Адаптивный дизайн", "Темная/светлая тема"]
+  }
+}

@@ -1,0 +1,169 @@
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Документация - Hackathon Aggregator Frontend</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: system-ui, -apple-system, 'Segoe UI', sans-serif; background: #f5f7fa; padding: 2rem; }
+        .container { max-width: 1200px; margin: 0 auto; }
+        h1 { color: #1e293b; margin-bottom: 0.5rem; }
+        .badge { display: inline-block; background: #3b82f6; color: white; padding: 4px 12px; border-radius: 20px; font-size: 0.8rem; }
+        .card { background: white; border-radius: 1rem; padding: 1.5rem; margin-bottom: 1.5rem; box-shadow: 0 2px 8px rgba(0,0,0,0.05); }
+        h2 { color: #1e293b; margin-bottom: 1rem; border-bottom: 2px solid #e2e8f0; padding-bottom: 0.5rem; }
+        h3 { color: #475569; margin: 1rem 0 0.5rem 0; }
+        table { width: 100%; border-collapse: collapse; }
+        th, td { text-align: left; padding: 0.75rem; border-bottom: 1px solid #e2e8f0; }
+        th { background: #f8fafc; font-weight: 600; color: #1e293b; }
+        code { background: #f1f5f9; padding: 0.2rem 0.4rem; border-radius: 6px; font-family: monospace; font-size: 0.85rem; }
+        .version { color: #64748b; margin-bottom: 1rem; }
+        .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 1rem; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>📚 Hackathon Aggregator Frontend</h1>
+        <div class="version">
+            <span class="badge">v1.0.0</span>
+            <span style="margin-left: 0.5rem;">2026</span>
+        </div>
+        <p>Веб-приложение для поиска и участия в IT-хакатонах</p>
+        <p><strong>Авторы:</strong> ИКБО-42-23 (Шаталов Р.А., Ератин Н.В., Ладиков М.Д., Матюха Е.А., Кутдюсов Д.А.)</p>
+        
+        <div class="card">
+            <h2>🛠 Технологический стек</h2>
+            <table>
+                <tr><th>Компонент</th><th>Версия/Технология</th></tr>
+                <tr><td>Язык</td><td>JavaScript ES6+</td></tr>
+                <tr><td>Стили</td><td>CSS3 с эффектами Glassmorphism</td></tr>
+                <tr><td>Иконки</td><td>Font Awesome 6</td></tr>
+                <tr><td>Хранилище</td><td>LocalStorage API</td></tr>
+                <tr><td>Календарь</td><td>html2canvas v1.4.1</td></tr>
+            </table>
+        </div>
+        
+        <div class="card">
+            <h2>📦 Классы</h2>
+            
+                <h3>User</h3>
+                <p><code>js/models/userModel.js</code></p>
+                <p>Модель пользователя системы</p>
+                <p><strong>Методы:</strong> register(), login(), restorePassword(), addToSavedEvents(), getSavedEvents()</p>
+                <p><strong>Свойства:</strong> id, name, email, password, city, skills, role, createdAt</p>
+                <hr style="margin: 1rem 0;">
+            
+                <h3>AuthComponent</h3>
+                <p><code>js/components/auth.js</code></p>
+                <p>Компонент авторизации и регистрации</p>
+                <p><strong>Методы:</strong> render(), attachEvents(), destroy()</p>
+                <p><strong>Свойства:</strong> -</p>
+                <hr style="margin: 1rem 0;">
+            
+                <h3>MainApp</h3>
+                <p><code>js/components/mainApp.js</code></p>
+                <p>Главная страница со списком хакатонов</p>
+                <p><strong>Методы:</strong> render(), attachEvents(), updateHackathonList(), updateCalendarPreview(), updateUserInfo()</p>
+                <p><strong>Свойства:</strong> -</p>
+                <hr style="margin: 1rem 0;">
+            
+                <h3>HackathonCard</h3>
+                <p><code>js/components/hackathonCard.js</code></p>
+                <p>Карточка хакатона</p>
+                <p><strong>Методы:</strong> render(), attachEvents(), showNotification()</p>
+                <p><strong>Свойства:</strong> -</p>
+                <hr style="margin: 1rem 0;">
+            
+                <h3>ProfileModal</h3>
+                <p><code>js/components/ProfileModal.js</code></p>
+                <p>Модальное окно профиля пользователя</p>
+                <p><strong>Методы:</strong> render(), renderProfileContent(), renderHackathonsContent(), renderSettingsContent(), attachEvents(), refreshModal()</p>
+                <p><strong>Свойства:</strong> -</p>
+                <hr style="margin: 1rem 0;">
+            
+                <h3>CalendarView</h3>
+                <p><code>js/components/CalendarView.js</code></p>
+                <p>Компонент календаря с экспортом</p>
+                <p><strong>Методы:</strong> render(), renderCalendar(), exportCalendarAsImage(), showDayHackathons(), updateCalendar()</p>
+                <p><strong>Свойства:</strong> -</p>
+                <hr style="margin: 1rem 0;">
+            
+        </div>
+        
+        <div class="card">
+            <h2>🔧 Сервисы</h2>
+            
+                <h3>storageService</h3>
+                <p><code>js/services/storageService.js</code></p>
+                <p>Работа с localStorage</p>
+                <p><strong>Функции:</strong> initStorage(), getUsers(), createUser(), loginUser(), getCurrentUser(), logoutUser(), updateUserProfile()</p>
+                <hr style="margin: 1rem 0;">
+            
+                <h3>themeService</h3>
+                <p><code>js/services/themeService.js</code></p>
+                <p>Управление темой и шрифтами</p>
+                <p><strong>Функции:</strong> getUserSettings(), saveUserSettings(), applyTheme(), applyFontSize(), updateSetting()</p>
+                <hr style="margin: 1rem 0;">
+            
+                <h3>profileService</h3>
+                <p><code>js/services/profileService.js</code></p>
+                <p>Управление профилем и регистрациями</p>
+                <p><strong>Функции:</strong> getUserRegisteredHackathons(), registerForHackathon(), cancelRegistration(), updateUserProfileData()</p>
+                <hr style="margin: 1rem 0;">
+            
+        </div>
+        
+        <div class="card">
+            <h2>💾 Данные</h2>
+            <p><strong>data/mockHackathons.js</strong></p>
+            <p>Заглушка с данными хакатонов</p>
+            <p>Количество хакатонов: 6</p>
+        </div>
+        
+        <div class="card">
+            <h2>🎨 Стили</h2>
+            <p><code>css/styles.css</code></p>
+            <p>undefined</p>
+            <p><strong>Особенности:</strong> Glassmorphism, Неоновая подсветка, Анимированный градиент, Адаптивный дизайн, Темная/светлая тема</p>
+        </div>
+        
+        <div class="card">
+            <h2>📋 Скрипты</h2>
+            <table>
+                <tr><th>Команда</th><th>Описание</th></tr>
+                <tr><td><code>npm start</code></td><td>Запуск локального сервера на порту 8000</td></tr>
+                <tr><td><code>npm run docs</code></td><td>Генерация документации JSDoc</td></tr>
+            </table>
+        </div>
+        
+        <div class="card">
+            <h2>📦 Зависимости</h2>
+            <table>
+                <tr><th>Пакет</th><th>Версия</th><th>Назначение</th></tr>
+                <tr><td>html2canvas</td><td>v1.4.1</td><td>Экспорт календаря в PNG</td></tr>
+                <tr><td>Font Awesome</td><td>6.0.0</td><td>Иконки</td></tr>
+                <tr><td>JSDoc</td><td>4.0.0</td><td>Генерация документации</td></tr>
+            </table>
+        </div>
+        
+        <div class="card">
+            <h2>📁 Структура проекта</h2>
+            <pre style="background: #f8fafc; padding: 1rem; border-radius: 8px; overflow-x: auto;">
+frontend/
+├── index.html
+├── css/
+│   └── styles.css          # Все стили (Glassmorphism + неон)
+├── js/
+│   ├── app.js              # Точка входа
+│   ├── services/           # Сервисы для работы с данными
+│   ├── components/         # UI компоненты
+│   ├── models/             # Модели данных
+│   └── utils/              # Вспомогательные функции
+└── data/
+    └── mockHackathons.js   # Заглушка с хакатонами
+            </pre>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,26 @@
+{
+  "name": "hackathon-aggregator-frontend",
+  "version": "1.0.0",
+  "description": "Фронтенд приложение для агрегации хакатонов",
+  "author": "ИКБО-42-23",
+  "license": "MIT",
+  "main": "index.html",
+  "keywords": [
+    "hackathon",
+    "aggregator",
+    "frontend",
+    "javascript"
+  ],
+  "dependencies": {
+    "html2canvas": "^1.4.1",
+    "font-awesome": "^6.0.0"
+  },
+  "devDependencies": {
+    "jsdoc": "^4.0.0",
+    "live-server": "^1.2.2"
+  },
+  "scripts": {
+    "start": "npx live-server --port=8000",
+    "docs": "npx jsdoc js -r -d docs"
+  }
+}
