@@ -4,7 +4,7 @@
 """
 
 from typing import List, Dict
-from models import HackathonEvent
+from backend.models import HackathonEvent
 
 
 class ParserSystem:
